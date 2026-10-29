@@ -370,7 +370,7 @@ Incorpora una nueva variable a `flights` denominado `Full_Date` que sea de tipo 
 
 ```{r }
 flights<-flights %>% mutate(Full_Date=paste(day,month,year, sep="-"))
-
+flights<-flights %>% select(!contains('day')) %>% select(!contains('month')) %>% select(!contains('year'))
 ```
 
 ### Ejercicio 11
