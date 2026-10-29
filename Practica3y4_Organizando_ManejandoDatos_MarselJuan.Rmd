@@ -328,8 +328,9 @@ En nuestro estudio queremos aplicar una serie de criterios de exclusión sobre l
 - Nota: Revisar el uso de la función filter vista en clase y tener en cuenta los operadores de comparación: igual ==, distinto !=, mayor \>, mayor o igual \>=, menor \<, menor o igual \<=.
 
 ```{r }
-
-
+planes.f<-planes %>% filter(manufacturer!='MCDONELL DOUGLAS') %>%
+  filter(90 < seats & seats < 210)
+#Pendiente de acabar
 
 ```
 
