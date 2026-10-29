@@ -329,8 +329,8 @@ En nuestro estudio queremos aplicar una serie de criterios de exclusión sobre l
 
 ```{r }
 planes.f<-planes %>% filter(manufacturer!='MCDONELL DOUGLAS') %>%
-  filter(90 < seats & seats < 210)
-#Pendiente de acabar
+  filter(90 < seats & seats < 210) %>%
+  mutate(manufacturer = ifelse(grepl("AIRBUS", manufacturer, ignore.case = TRUE), "AIRBUS COMP", manufacturer))
 
 ```
 
